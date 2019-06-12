@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<title>Toolbox</title>
+</head>
+<body>
+    <div class="main" id="app">
+        <div class='title'>
+            <h1>Toolbox</h1>
+        </div>
+
+        <div id="icon-container">
+            <h3 id="icon" v-for="topic in topics"><i v-bind:class="topic.icon" v-on:click="topic.show = !topic.show" style="font-size: 1.5em"></i></h3>
+        </div>
+
+        <div>
+            <div id="todo-list" class="list-group">
+                <h3><i class="fas fa-check-square" style="font-size: 1.5em"></i>TO DO:</h3>
+                <hr>
+                <input type="text" id="input" size="35" placeholder="What do I need to do today?" v-on:keyup.enter="addToDoItem($event)">
+                <ul id="list">
+                    <li id="todo-list-item" v-for="(todo,index) in todos" v-on:click="toggleStrike(index)" v-bind:class="getClass(index)">{{ todo.text }}</li>
+                </ul>
+            </div>
+            <div class="list-group" v-for="topic in topics" v-show="topic.show">
+                <h3 v-on:click="topic.show = !topic.show"><i v-bind:class="topic.icon" style="font-size: 1.5em"></i>{{ topic.name }}</h3>
+                <hr>
+                <ul>
+                    <li v-for="link in topic.links">
+                        <a href="#" v-on:click="openLink(link)">{{ link.name }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+	<!-- Vue CDN  -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script> -->
+    <script type="text/javascript" src="app.js"></script>
+
+</body>
+</html>

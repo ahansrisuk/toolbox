@@ -1,0 +1,23 @@
+{
+  "name": "toolbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "devDependencies": {
+    "tailwindcss": "^1.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "Allen Hansrisuk",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "path": "^0.12.7",
+    "vue": "^2.6.10",
+    "vue-clipboard2": "^0.3.0",
+    "webpack": "^4.29.1",
+    "webpack-cli": "^3.2.1"
+  }
+}
