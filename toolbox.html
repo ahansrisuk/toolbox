@@ -13,7 +13,7 @@
         </div>
 
         <div id="icon-container">
-            <h3 id="icon" v-for="topic in topics"><i v-bind:class="topic.icon" v-on:click="topic.show = !topic.show" style="font-size: 1.5em" title="topic.name"></i></h3>
+            <h3 id="icon" v-for="topic in topics"><i v-bind:class="topic.icon" v-on:click="topic.show = !topic.show" style="font-size: 1.5em" v-bind:title="topic.name"></i></h3>
         </div>
 
         <div>
