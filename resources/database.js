@@ -97,12 +97,12 @@ export default {
                     links: [
                         {
                             name: "MyChart - POC",
-                            url: "http://esmepicmchtnp.esm.johnshopkins.edu/MyChartPOC/",
+                            url: "https://esmepicmchtnp.esm.johnshopkins.edu/MyChartPOC",
                             copyText: ""
                         },
                         {
                             name: "MyChart - TST",
-                            url: "http://esmepicmchttst1.esm.johnshopkins.edu/MyCharttst/",
+                            url: "http://esmepicmchttst1.esm.johnshopkins.edu/MyCharttst/default.asp",
                             copyText: "",
                         },
                         {
@@ -114,6 +114,10 @@ export default {
                             name: "MyChart - Production",
                             url: "https://mychart.hopkinsmedicine.org/MyChart/",
                             copyText: "",
+                        },
+                        {
+                            name: "MyChart SharePoint",
+                            url: "https://livejohnshopkins.sharepoint.com/sites/HealthIT/AppTeams/Epic/PtAccess/MyChart/Forms/AllItems.aspx",
                         }
                     ]
                 },
