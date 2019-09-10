@@ -12,5 +12,5 @@ module.exports = {
         filename: 'app.js'
     },
     mode: 'development',
-    watch: true
+    // watch: true
 };
